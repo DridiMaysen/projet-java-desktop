@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.MarqueController">
+   <children>
+      <Label layoutX="224.0" layoutY="30.0" text="Vue Marque" textFill="#230472">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="103.0" text="Id Marque :" textFill="#0b8335">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="143.0" text="Nom Marque :" textFill="#0b8335">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtid" layoutX="150.0" layoutY="104.0" />
+      <TextField fx:id="txtnom" layoutX="150.0" layoutY="144.0" />
+      <Button layoutX="55.0" layoutY="213.0" mnemonicParsing="false" onAction="#add" prefHeight="35.0" prefWidth="68.0" text="Add">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="55.0" layoutY="262.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="68.0" text="Delete">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="138.0" layoutY="215.0" mnemonicParsing="false" onAction="#clear" prefHeight="35.0" prefWidth="68.0" text="Clear">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="137.0" layoutY="262.0" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="68.0" text="Update">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tablemarque" layoutX="347.0" layoutY="113.0" onMousePressed="#charge" prefHeight="200.0" prefWidth="166.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="75.0" text="IdMarque" />
+          <TableColumn fx:id="colnom" prefWidth="88.0" text="NomMarque" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
